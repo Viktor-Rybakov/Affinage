@@ -1,0 +1,27 @@
+.bar {
+  width: 105px;
+  height: 105px;
+
+  background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpolygon points='20 0, 20 20, 0 20' fill='%23F7E611'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right bottom;
+}
+
+.bar__elem {
+  position: absolute;
+
+  font-weight: 900;
+  font-style: italic;
+}
+
+.bar__elem_13 {
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 20px;
+}
+
+.bar__elem_7 {
+  display: none;
+}

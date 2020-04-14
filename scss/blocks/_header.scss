@@ -1,0 +1,24 @@
+.header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 5px;
+  padding-bottom: 34px;
+}
+
+.header__link {
+  display: block;
+  margin-left: 20px;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__menu-button {
+  margin: 0 8px 0 0;
+}

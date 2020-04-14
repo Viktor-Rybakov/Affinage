@@ -1,0 +1,40 @@
+.letters-group1 {
+  position: absolute;
+}
+
+.letters-group1__elem {
+  font-family: "Philosopher";
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  &_fig1 {
+    display: none;
+  }
+
+  &_a {
+    display: none;
+  }
+
+  &_f {
+    display: none;
+  }
+
+  &_f2 {
+    display: none;
+  }
+
+  &_i {
+    display: none;
+  }
+
+  &_fig2 {
+    width: 23px;
+    height: 24px;
+  }
+
+  &_n {
+    display: none;
+  }
+}

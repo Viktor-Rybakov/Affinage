@@ -1,0 +1,67 @@
+.main {
+  position: relative;
+
+  background-color: $background-color-2;
+}
+
+.main__title {
+  font-family: Geometria;
+  text-transform: uppercase;
+}
+
+.main__slogan {
+  position: absolute;
+  left: -19px;
+  bottom: 318px;
+  z-index: 3;
+  
+  margin: 0;
+  padding: 0;
+  
+  font-family: "Philosopher";
+  font-size: 9px;
+  font-style: italic;
+  
+  text-transform: lowercase;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+}
+
+.main__slider {
+  z-index: 2;
+}
+
+.main__letters-group1 {
+  bottom: 29px;
+  left: 45px;
+  z-index: 3;
+}
+
+.main__letters-group2 {
+  bottom: 317px;
+  right: 28px;
+  z-index: 1;
+}
+
+.main__decoration-rect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  
+  width: 154px;
+  height: 134px;
+  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='282' height='177' viewBox='0 0 282 177'%3E%3Cg transform='translate(282) rotate(90)' fill='none'%3E%3Cpath d='M 1 1 L 1 281 L 138.1257171630859 281 L 175.8562164306641 1 L 1 1 M 0 0 L 177 0 L 139 282 L 0 282 L 0 0 Z' stroke='%23000'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.main__decoration-logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+
+  transform: translateX(-50%);
+}
