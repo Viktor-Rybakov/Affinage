@@ -44,13 +44,25 @@
       <p class="main__slogan">очень хороший слоган</p>
       
       <div class="slider main__slider">
-        <picture class="slider__photo slider__photo_back">
-          <img class="slider__img" src="img/photo_1.jpg" alt="View of gallery" >
-        </picture>
-        
-        <picture class="slider__photo slider__photo_front">
-          <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
-        </picture>
+        <ul class="slider__list">
+          <li class="slider__item slider__item_back">
+            <picture class="slider__photo">
+              <img class="slider__img" src="img/photo_1.jpg" alt="View of gallery" >
+            </picture>
+          </li>
+
+          <li class="slider__item slider__item_front">
+            <picture class="slider__photo">
+              <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
+            </picture>
+          </li>
+
+          <li class="slider__item slider__item_disabled">
+            <picture class="slider__photo">
+              <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
+            </picture>
+          </li>
+        </ul>
 
         <button class="slider__button slider__button_prev" type="button" aris-label="Previous slide">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
