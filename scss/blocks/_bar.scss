@@ -6,6 +6,16 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: right bottom;
+
+  @include desktop {
+    width: 138px;
+    height: 383px;
+
+    background-image: none;
+    background-color: $background-color-2;
+
+    box-shadow: 0 0 88px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .bar__elem {
@@ -16,12 +26,42 @@
 }
 
 .bar__elem_13 {
-  bottom: 20px;
-  right: 20px;
+  bottom: 21px;
+  right: 18px;
 
   font-size: 20px;
+  letter-spacing: 2px;
+
+  @include desktop {
+    bottom: 34px;
+    right: 63px;
+
+    font-size: 45px;
+    letter-spacing: 4.5px;
+  }
 }
 
 .bar__elem_7 {
+  bottom: 20px;
+  right: 53px;
+
   display: none;
+
+  @include desktop {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 23px;
+    left: 1px;
+
+    width: 17px;
+    height: 3px;
+
+    background-color: #000;
+
+  }
 }

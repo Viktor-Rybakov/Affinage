@@ -1,32 +1,79 @@
 .letters-group2 {
   position: absolute;
+
+  @include desktop {
+    width: 294px;
+    height: 68px;
+  }
 }
 
 .letters-group2__elem {
-  font-family: "Philosopher";
+  font-family: Philosopher;
   font-size: 25px;
   font-weight: 700;
-  line-height: 28px;
   text-transform: uppercase;
+
+  @include desktop {
+    position: absolute;
+  }
 
   &_a {
     display: none;
+
+    @include desktop {
+      top: 0;
+      left: 0;
+
+      display: block;
+    }
   }
 
   &_fig1 {
     display: none;
+
+    @include desktop {
+      top: 31px;
+      left: 35px;
+
+      display: block;
+    }
   }
 
   &_g {
     display: none;
+
+    @include desktop {
+      top: 6px;
+      left: 99px;
+
+      display: block;
+      width: 22px;
+      height: 29px;
+      padding-left: 2px;
+      padding-top: 1px;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.225' height='18.5' viewBox='0 0 18.225 18.5'%3E%3Cpath d='M16.5-1.175A11.017,11.017,0,0,1,13.425.1a14.839,14.839,0,0,1-3.55.4,9.123,9.123,0,0,1-3.6-.7,8.792,8.792,0,0,1-2.85-1.913A8.74,8.74,0,0,1,1.55-4.963,9.191,9.191,0,0,1,.875-8.5a9.375,9.375,0,0,1,.588-3.35,8.018,8.018,0,0,1,1.675-2.7,7.738,7.738,0,0,1,2.6-1.8A8.5,8.5,0,0,1,9.125-17a10.291,10.291,0,0,1,3.85.612,5.8,5.8,0,0,1,2.2,1.412,2.265,2.265,0,0,1,.375.75,5.979,5.979,0,0,1,.188.887,8.706,8.706,0,0,1,.075.938c.008.317.012.9.012.9S17.033-8.65,18.1-8.65v.625a1.318,1.318,0,0,0-1.225.625A3.413,3.413,0,0,0,16.5-5.65Z' transform='translate(-0.375 17.5)' fill='none' stroke='%23000' stroke-linejoin='round' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E%0A");
+      background-position: left 6px;
+      background-repeat: no-repeat;
+    }
   }
 
   &_e {
     display: none;
+
+    @include desktop {
+      top: 34px;
+      left: 213px;
+
+      display: block;
+    }
   }
 
   &_fig2 {
-    width: 23px;
-    height: 24px;
+
+    @include desktop {
+      top: 13px;
+      right: 0;
+    }
   }
 }

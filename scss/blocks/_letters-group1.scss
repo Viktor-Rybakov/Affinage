@@ -1,40 +1,95 @@
 .letters-group1 {
   position: absolute;
+
+  @include desktop {
+    width: 346px;
+    height: 107px;
+
+    overflow-y: hidden;
+  }
 }
 
 .letters-group1__elem {
-  font-family: "Philosopher";
+  font-family: Philosopher;
   font-size: 25px;
   font-weight: 700;
-  line-height: 28px;
   text-transform: uppercase;
+
+  @include desktop {
+    position: absolute;
+  }
 
   &_fig1 {
     display: none;
+
+    @include desktop {
+      top: 0;
+      left: 0;
+
+      display: block;
+    }
   }
 
   &_a {
     display: none;
+
+    @include desktop {
+      top: 50px;
+      left: 75px;
+
+      display: block;
+    }
   }
 
   &_f {
     display: none;
+
+    @include desktop {
+      top: 15px;
+      left: 140px;
+
+      display: block;
+    }
   }
 
   &_f2 {
     display: none;
+
+    @include desktop {
+      top: 59px;
+      left: 204px;
+      
+      display: block;
+    }
   }
 
   &_i {
     display: none;
+
+    @include desktop {
+      top: 31px;
+      left: 263px;
+
+      display: block;
+    };
   }
 
   &_fig2 {
-    width: 23px;
-    height: 24px;
+
+    @include desktop {
+      bottom: -11px;
+      left: 259px;
+    }
   }
 
   &_n {
     display: none;
+
+    @include desktop {
+      bottom: 11px;
+      right: 0;
+
+      display: block;
+    }
   }
 }

@@ -1,7 +1,16 @@
 .slider {
   position: relative;
 
+  max-width: 1280px;
   min-height: 485px;
+
+  overflow-x: hidden;
+
+  @include desktop {
+    min-height: 577px;
+
+    overflow-x: visible;
+  }
 }
 
 .slider__photo {
@@ -28,6 +37,30 @@
 
   &_front::after {
     background-color: rgba(247, 230, 17, 0.6);
+
+    @include desktop {
+      background-color: rgba(247, 230, 17, 0.8);
+    }
+  }
+
+  &_back::before,
+  &_front::before {
+
+    @include desktop {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  
+      width: 100%;
+      height: 100%;
+      
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
@@ -35,31 +68,48 @@
   top: 0;
   left: -40px;
   z-index: 1;
+
+  @include desktop {
+    left: 0;
+  }
 }
 
 .slider__photo_back .slider__img {
   height: 184px;
-}
+  width: auto;
+  max-width: none;
 
+  @include desktop {
+    height: 525px;
+  }
+}
 
 .slider__photo_front {
   bottom: 0;
+  left: 50%;
   z-index: 4;
 
-  width: 100%;
+  transform: translateX(-50%);
 
-  overflow: hidden;
+  @include desktop {
+    left: auto;
+    right: 0;
+    z-index: 3;
+
+    transform: translateX(0%);
+  }
 }
 
 .slider__photo_front .slider__img {
-  position: relative;
-  left: 50%;
-
   height: 318px;
   width: auto;
   max-width: none;
 
-  transform: translateX(-50%);
+  @include desktop {
+    height: 490px;
+
+    opacity: 0.5;
+  }
 }
 
 .slider__img {
@@ -69,7 +119,7 @@
 .slider__button {
   position: absolute;
   bottom: 134px;
-  z-index: 6;
+  z-index: 7;
 
   display: flex;
   justify-content: center;
@@ -90,12 +140,25 @@
     opacity: 1;
   }
 
+  @include desktop {
+    bottom: 150px;
+  }
+
   &_prev {
     left: 8px;
+
+    @include desktop {
+      left: auto;
+      right: 343px;
+    }
   }
 
   &_next {
     right: 8px;
+
+    @include desktop {
+      right: 147px;
+    }
   }
 }
 
@@ -103,7 +166,13 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 7;
+  z-index: 6;
+
+  @include desktop {
+    bottom: 35px;
+    right: 198px;
+    z-index: 6;
+  }
 }
 
 .slider__decoration {
@@ -117,22 +186,47 @@
   color: transparent;
   -webkit-text-stroke: 1px #000;
 
+  @include desktop {
+    font-size: 80px;
+  }
+
   &_a {
     left: 70px;
     bottom: 260px;
     z-index: 5;
+
+    @include desktop {
+      left: auto;
+      bottom: auto;
+      top: -46px;
+      right: 318px;
+    }
   }
 
   &_g {
     left: 148px;
     bottom: 276px;
     z-index: 3;
+
+    @include desktop {
+      left: auto;
+      bottom: auto;
+      top: 114px;
+      right: 233px;
+      z-index: 4;
+    }
   }
 
   &_e {
     left: 218px;
     bottom: 354px;
-    z-index: 2
-    ;
+    z-index: 2;
+
+    @include desktop {
+      left: auto;
+      bottom: auto;
+      top: 36px;
+      right: 154px;
+    }
   }
 }

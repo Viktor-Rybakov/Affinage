@@ -1,7 +1,7 @@
 $phone: 560px;
 $tablet: 768px;
 $tablet-ipad: 960px;
-$desktop: 1210px;
+$desktop: 800px;
 
 @mixin phone {
   @media (min-width: #{$phone}) {

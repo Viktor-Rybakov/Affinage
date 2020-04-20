@@ -7,107 +7,115 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <link rel="preload" href="fonts/Philosopher-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Philosopher-Bold.woff2" as="font">
-  <link rel="preload" href="fonts/Philosopher-Italic.woff2" as="font">
-  <link rel="preload" href="fonts/Geometria.woff2" as="font">
-  <link rel="preload" href="fonts/Geometria-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/Geometria-Light.woff2" as="font">
-  <link rel="preload" href="fonts/Geometria-LightItalic.woff2" as="font">
-  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font">
-  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font">
+  <link rel="preload" href="fonts/Philosopher-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Philosopher-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Philosopher-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Geometria.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Geometria-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Geometria-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Geometria-LightItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
   
   <section class="main">
-    <header class="header main__header">
-      <a href="" class="header__link" aria-label="Home">
-        <img src="img/logo.svg" alt="logo like tetter A" class="header__logo" width="23" height="24">
-      </a>
+    <div class="main__container">
+      <header class="header main__header">
+        <a href="" class="header__link" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22.802" height="23.213" viewBox="0 0 22.802 23.213">
+            <path d="M286.95-832.57l4.314,10.066H282.43l4.519-10.066ZM300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h1.438l2.876-6.779h10.271l.822,2.26a7.105,7.105,0,0,0,1.438,2.465,5.538,5.538,0,0,0,1.643,1.438,14.141,14.141,0,0,0,1.643.616h2.67v-.822" transform="translate(-277.5 837.5)" fill="#131212"/>
+          </svg>
+        </a>
+        
+        <button class="burger-button header__menu-button" type="button" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+            <g>
+              <rect width="20" height="2"/>
+              <rect width="20" height="2" transform="translate(0 6)"/>
+              <rect width="20" height="2" transform="translate(0 12)"/>
+            </g>
+          </svg>
+        </button>
+      </header>
+
+      <h1 class="main__title">Affinage</h1>
+
+      <p class="main__slogan">очень хороший слоган</p>
       
-      <button class="burger-button header__menu-button" type="button" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
-          <g>
-            <rect width="20" height="2"/>
-            <rect width="20" height="2" transform="translate(0 6)"/>
-            <rect width="20" height="2" transform="translate(0 12)"/>
-          </g>
-        </svg>
-      </button>
-    </header>
+      <div class="slider main__slider">
+        <picture class="slider__photo slider__photo_back">
+          <img class="slider__img" src="img/photo_1.jpg" alt="View of gallery" >
+        </picture>
+        
+        <picture class="slider__photo slider__photo_front">
+          <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
+        </picture>
 
-    <h1 class="main__title visually-hidden">Affinage</h1>
+        <button class="slider__button slider__button_prev" type="button" aris-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
+            <path d="M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z" transform="translate(20 36) rotate(180)" opacity="0.4"/>
+          </svg>
+        </button>
 
-    <p class="main__slogan">очень хороший слоган</p>
-    
-    <div class="slider main__slider">
-      <picture class="slider__photo slider__photo_back">
-        <img class="slider__img" src="img/photo_1.jpg" alt="View of gallery" >
-      </picture>
+        <button class="slider__button slider__button_next" type="button" aris-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
+            <path d="M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z" opacity="0.4"/>
+          </svg>
+        </button>
+
+        <div class="bar slider__bar">
+          <div class="bar__elem bar__elem_13">13</div>
+          <div class="bar__elem bar__elem_7">7</div>
+        </div>
+
+        <div class="slider__decoration slider__decoration_a">A</div>
+        <div class="slider__decoration slider__decoration_g">G</div>
+        <div class="slider__decoration slider__decoration_e">E</div>
+      </div>
+
+      <div class="main__letters-group1 letters-group1">
+        <div class="letters-group1__elem letters-group1__elem_fig1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22.802" height="23.213" viewBox="0 0 22.802 23.213">
+            <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277.5 837.5)" fill="#131212" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="letters-group1__elem letters-group1__elem_a">A</div>
+        <div class="letters-group1__elem letters-group1__elem_f">F</div>
+        <div class="letters-group1__elem letters-group1__elem_f2">F</div>
+        <div class="letters-group1__elem letters-group1__elem_i">I</div>
+        <div class="letters-group1__elem letters-group1__elem_fig2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23.802" height="24.213" viewBox="0 0 23.802 24.213">
+            <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277 838)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="letters-group1__elem letters-group1__elem_n">N</div>
+      </div>
       
-      <picture class="slider__photo slider__photo_front">
-        <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
-      </picture>
-
-      <button class="slider__button slider__button_prev" type="button" aris-label="Previous slide">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
-          <path d="M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z" transform="translate(20 36) rotate(180)" opacity="0.4"/>
-        </svg>
-      </button>
-
-      <button class="slider__button slider__button_next" type="button" aris-label="Next slide">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
-          <path d="M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z" opacity="0.4"/>
-        </svg>
-      </button>
-
-      <div class="bar slider__bar">
-        <div class="bar__elem bar__elem_13">13</div>
-        <div class="bar__elem bar__elem_7">7</div>
+      <div class="main__letters-group2 letters-group2">
+        <div class="letters-group2__elem letters-group2__elem_a">A</div>
+        <div class="letters-group2__elem letters-group2__elem_fig1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23.802" height="24.213" viewBox="0 0 23.802 24.213">
+            <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277 838)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="letters-group2__elem letters-group2__elem_g">G</div>
+        <div class="letters-group2__elem letters-group2__elem_e">E</div>
+        <div class="letters-group2__elem letters-group2__elem_fig2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22.802" height="23.213" viewBox="0 0 22.802 23.213">
+            <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277.5 837.5)" fill="#131212" fill-rule="evenodd"/>
+          </svg>
+        </div>
       </div>
-
-      <div class="slider__decoration slider__decoration_a">A</div>
-      <div class="slider__decoration slider__decoration_g">G</div>
-      <div class="slider__decoration slider__decoration_e">E</div>
+      
+      <div class="main__decoration main__decoration_rect"></div>
+      <div class="main__decoration main__decoration_logo"></div>
+      <div class="main__decoration main__decoration_1">(1)</div>
+      <div class="main__decoration main__decoration_3">(3)</div>
+      <div class="main__decoration main__decoration_51">51</div>
+      <div class="main__decoration main__decoration_ural">Ural<br>03</div>
+      <div class="main__decoration main__decoration_test">тестовое задание</div>
     </div>
-
-    <div class="main__letters-group1 letters-group1">
-      <div class="letters-group1__elem letters-group1__elem_fig1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22.802" height="23.213" viewBox="0 0 22.802 23.213">
-          <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277.5 837.5)" fill="#131212" fill-rule="evenodd"/>
-        </svg>
-      </div>
-      <div class="letters-group1__elem letters-group1__elem_a">A</div>
-      <div class="letters-group1__elem letters-group1__elem_f">F</div>
-      <div class="letters-group1__elem letters-group1__elem_f2">F</div>
-      <div class="letters-group1__elem letters-group1__elem_i">I</div>
-      <div class="letters-group1__elem letters-group1__elem_fig2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23.802" height="24.213" viewBox="0 0 23.802 24.213">
-          <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277 838)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"/>
-        </svg>
-      </div>
-      <div class="letters-group1__elem letters-group1__elem_n">N</div>
-    </div>
-    
-    <div class="main__letters-group2 letters-group2">
-      <div class="letters-group2__elem letters-group2__elem_a">A</div>
-      <div class="letters-group2__elem letters-group2__elem_fig1">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23.802" height="24.213" viewBox="0 0 23.802 24.213">
-          <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277 838)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"/>
-        </svg>
-      </div>
-      <div class="letters-group2__elem letters-group2__elem_g">G</div>
-      <div class="letters-group2__elem letters-group2__elem_e">E</div>
-      <div class="letters-group2__elem letters-group2__elem_fig2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22.802" height="23.213" viewBox="0 0 22.802 23.213">
-          <path id="path14" d="M300.3-815.109c-.411,0-.822-.205-1.233-.205a4.491,4.491,0,0,1-1.027-.616,4.3,4.3,0,0,1-.822-1.232,11.463,11.463,0,0,1-1.027-1.643l-7.6-18.694h-1.027L277.5-814.287h22.8v-.822" transform="translate(-277.5 837.5)" fill="#131212" fill-rule="evenodd"/>
-        </svg>
-      </div>
-    </div>
-    
-    <div class="main__decoration-rect"></div>
-
-    <div class="main__decoration-logo decoration-logo"></div>
   </section>
 </body>
 </html>
