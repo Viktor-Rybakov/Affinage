@@ -7,14 +7,19 @@
   background-size: 100%;
   background-position: right bottom;
 
-  @include desktop {
+  @include tablet {
     width: 138px;
-    height: 383px;
+    height: 280px;
 
     background-image: none;
     background-color: $background-color-2;
-
+  
     box-shadow: 0 0 88px rgba(0, 0, 0, 0.1);
+  }
+
+  @include tablet-ipad {
+    width: 138px;
+    height: 383px;
   }
 }
 
@@ -32,7 +37,7 @@
   font-size: 20px;
   letter-spacing: 2px;
 
-  @include desktop {
+  @include tablet {
     bottom: 34px;
     right: 63px;
 
@@ -47,7 +52,7 @@
 
   display: none;
 
-  @include desktop {
+  @include tablet {
     display: block;
   }
 
@@ -62,6 +67,5 @@
     height: 3px;
 
     background-color: #000;
-
   }
 }

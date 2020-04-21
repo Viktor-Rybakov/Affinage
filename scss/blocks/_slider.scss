@@ -1,15 +1,27 @@
 .slider {
   position: relative;
   
-  max-width: 1280px;
   min-height: 485px;
   
-  overflow-x: hidden;
+  overflow: hidden;
+  
+  @include tablet {
+    max-width: 768px;
+    
+    overflow: visible;
+  }
+  
+  @include tablet-ipad {
+    min-height: 577px;
+    max-width: 960px;
+  }
   
   @include desktop {
-    min-height: 577px;
-    
-    overflow-x: visible;
+    max-width: 1200px;
+  }
+
+  @include min-width(1340px) {
+    max-width: 1280px;
   }
 }
 
@@ -28,7 +40,7 @@
   left: -40px;
   z-index: 1;
 
-  @include desktop {
+  @include min-width(480px) {
     left: 0;
   }
 }
@@ -40,12 +52,14 @@
 
   transform: translateX(-50%);
 
-  @include desktop {
+  @include min-width(480px) {
     left: auto;
     right: 0;
-    z-index: 3;
-
     transform: translateX(0%);
+  }
+
+  @include tablet {
+    z-index: 3;
   }
 }
 
@@ -58,7 +72,7 @@
   
   &::before {
     
-    @include desktop {
+    @include tablet {
       content: "";
       
       position: absolute;
@@ -92,6 +106,18 @@
 .slider__item_back .slider__photo {
   height: 184px;
 
+  @include min-width(480px) {
+    height: 250px;
+  }
+
+  @include tablet {
+    height: 300px;
+  }
+
+  @include tablet-ipad {
+    height: 400px;
+  }
+
   @include desktop {
     height: 525px;
   }
@@ -103,6 +129,14 @@
 
 .slider__item_front .slider__photo {
   height: 318px;
+  
+  @include tablet {
+    height: 350px;
+  }
+
+  @include tablet-ipad {
+    height: 440px;
+  }
 
   @include desktop {
     height: 490px;
@@ -111,7 +145,7 @@
   &::after {
     background-color: rgba(247, 230, 17, 0.6);
     
-    @include desktop {
+    @include tablet {
       background-color: rgba(247, 230, 17, 0.8);
     }
   }
@@ -123,7 +157,7 @@
   width: auto;
   max-width: initial;
 
-  @include desktop {
+  @include tablet {
     max-width: 100%;
     opacity: 0.5;
   }
@@ -153,15 +187,19 @@
     opacity: 1;
   }
 
-  @include desktop {
+  @include tablet {
     bottom: 150px;
   }
 
   &_prev {
     left: 8px;
 
-    @include desktop {
+    @include tablet {
       left: auto;
+      right: 243px;
+    }
+
+    @include desktop {
       right: 343px;
     }
   }
@@ -169,7 +207,11 @@
   &_next {
     right: 8px;
 
-    @include desktop {
+    @include tablet {
+      right: 47px;
+    }
+
+    @include desktop{
       right: 147px;
     }
   }
@@ -181,10 +223,15 @@
   right: 0;
   z-index: 6;
 
+  @include tablet {
+    bottom: 35px;
+    right: 98px;
+    z-index: 6;
+  }
+
   @include desktop {
     bottom: 35px;
     right: 198px;
-    z-index: 6;
   }
 }
 
@@ -199,46 +246,79 @@
   color: transparent;
   -webkit-text-stroke: 1px #000;
 
-  @include desktop {
+  @include tablet {
     font-size: 80px;
   }
 
   &_a {
-    left: 70px;
+    right: 204px;
     bottom: 260px;
     z-index: 5;
 
-    @include desktop {
-      left: auto;
+    @include min-width(480px) {
+      right: 304px;
+    }
+
+    @include min-width(620px) {
+      right: 354px;
+    }
+
+    @include tablet {
       bottom: auto;
       top: -46px;
+      right: 218px;
+    }
+    
+    @include desktop {
       right: 318px;
     }
   }
 
   &_g {
-    left: 148px;
+    right: 126px;
     bottom: 276px;
     z-index: 3;
 
-    @include desktop {
-      left: auto;
+    @include min-width(480px) {
+      right: 226px;
+    }
+
+    @include min-width(620px) {
+      right: 276px;
+    }
+
+    @include tablet {
       bottom: auto;
       top: 114px;
-      right: 233px;
+      right: 133px;
       z-index: 4;
+    }
+    
+    @include desktop {
+      right: 233px;
     }
   }
 
   &_e {
-    left: 218px;
+    right: 64px;
     bottom: 354px;
     z-index: 2;
 
-    @include desktop {
-      left: auto;
+    @include min-width(480px) {
+      right: 164px;
+    }
+
+    @include min-width(620px) {
+      right: 214px;
+    }
+
+    @include tablet {
       bottom: auto;
       top: 36px;
+      right: 54px;
+    }
+    
+    @include desktop {
       right: 154px;
     }
   }
