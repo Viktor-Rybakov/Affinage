@@ -5,6 +5,13 @@
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+
+    @include retina {
+      background: url('../img/backgroung@2x.png'), linear-gradient(to right, #fcfcfd, #fff);
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
   }
 }
 
@@ -261,7 +268,6 @@
     display: block;
   }
 
-  
   @include desktop {
     left: 223px;
   }
@@ -281,7 +287,6 @@
     display: block;
   }
 
-  
   @include desktop {
     left: 223px;
   }

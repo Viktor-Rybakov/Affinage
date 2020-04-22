@@ -16,6 +16,14 @@
   <link rel="preload" href="fonts/Geometria-LightItalic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons//favicon-16x16.png">
+  <link rel="manifest" href="favicons//site.webmanifest">
+  <link rel="mask-icon" href="favicons//safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   
@@ -47,19 +55,22 @@
         <ul class="slider__list">
           <li class="slider__item slider__item_back">
             <picture class="slider__photo">
-              <img class="slider__img" src="img/photo_1.jpg" alt="View of gallery" >
+              <source type="image/webp" srcset="img/photo_1@1x.webp 1x, img/photo_1@2x.webp 2x">
+              <img class="slider__img" src="img/photo_1@1x.jpg" srcset="img/photo_1@2x.jpg 2x" alt="Men griving bike Ural" >
             </picture>
           </li>
-
+          
           <li class="slider__item slider__item_front">
             <picture class="slider__photo">
-              <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
+              <source type="image/webp" srcset="img/photo_2@1x.webp 1x, img/photo_2@2x.webp 2x">
+              <img class="slider__img" src="img/photo_2@1x.jpg" srcset="img/photo_2@2x.jpg 2x" alt="View of gallery" >
             </picture>
           </li>
-
+          
           <li class="slider__item slider__item_disabled">
             <picture class="slider__photo">
-              <img class="slider__img" src="img/photo_2.jpg" alt="Men griving bike Ural">
+              <source type="image/webp" srcset="img/photo_3@1x.webp 1x, img/photo_3@2x.webp 2x">
+              <img class="slider__img" src="img/photo_3@1x.jpg" srcset="img/photo_3@2x.jpg 2x" alt="Building wall with logo Digital factory" >
             </picture>
           </li>
         </ul>

@@ -485,6 +485,15 @@ a {
   }
 }
 
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 768px) and (-o-device-pixel-ratio: 3 / 2), only screen and (min-width: 768px) and (min-device-pixel-ratio: 1.5) {
+  .main {
+    background: url("../img/backgroung@2x.png"), linear-gradient(to right, #fcfcfd, #fff);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
 .main__container {
   position: relative;
   margin-left: auto;
