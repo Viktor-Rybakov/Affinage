@@ -96,6 +96,13 @@
     font-size: 140px;
     letter-spacing: 50.4px;
   }
+
+  &_shadow {
+
+    @include tablet{
+      text-shadow: 0 0 5px $background-color-2;
+    }
+  }
 }
 
 .main__slogan {
@@ -176,7 +183,7 @@
 .main__letters-group2 {
   bottom: 313px;
   right: 28px;
-  z-index: 1;
+  z-index: 2;
 
   @include tablet {
     bottom: 9px;

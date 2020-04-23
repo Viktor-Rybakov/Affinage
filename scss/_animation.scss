@@ -1,0 +1,61 @@
+@keyframes front-out {
+  30% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(3000px);
+  }
+}
+
+@keyframes front-out_phone {
+  30% {
+    transform: translateX(-55%);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
+
+@keyframes front-in {
+  0% {
+    transform: translateX(-3000px);
+  }
+  70% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes front-in_phone {
+  0% {
+    transform: translateX(-1000px);
+  }
+  70% {
+    transform: translateX(-45%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes back {
+  0%{
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+}

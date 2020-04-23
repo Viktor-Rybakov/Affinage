@@ -7,15 +7,15 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <link rel="preload" href="fonts/Philosopher-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Philosopher-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Philosopher-Italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Geometria.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Geometria-Medium.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Geometria-Light.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Geometria-LightItalic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Philosopher-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Philosopher-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Philosopher-Italic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Geometria.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Geometria-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Geometria-Light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Geometria-LightItalic.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Geometria-Heavy.woff2" as="font" type="font/woff2">
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicons//apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons//favicon-32x32.png">
@@ -47,27 +47,27 @@
         </button>
       </header>
 
-      <h1 class="main__title visually-hidden_phone">Affinage</h1>
+      <h1 class="main__title js-main__title visually-hidden_phone">Affinage</h1>
 
       <p class="main__slogan">очень хороший слоган</p>
       
-      <div class="slider main__slider">
-        <ul class="slider__list">
-          <li class="slider__item slider__item_back">
+      <div class="slider js-slider main__slider">
+        <ul id="slider" class="slider__list">
+          <li class="slider__item js-slider__item slider__item_front" aria-hidden="false">
             <picture class="slider__photo">
               <source type="image/webp" srcset="img/photo_1@1x.webp 1x, img/photo_1@2x.webp 2x">
               <img class="slider__img" src="img/photo_1@1x.jpg" srcset="img/photo_1@2x.jpg 2x" alt="Men griving bike Ural" >
             </picture>
           </li>
-          
-          <li class="slider__item slider__item_front">
+
+          <li class="slider__item js-slider__item slider__item_back" aria-hidden="false">
             <picture class="slider__photo">
               <source type="image/webp" srcset="img/photo_2@1x.webp 1x, img/photo_2@2x.webp 2x">
               <img class="slider__img" src="img/photo_2@1x.jpg" srcset="img/photo_2@2x.jpg 2x" alt="View of gallery" >
             </picture>
           </li>
-          
-          <li class="slider__item slider__item_disabled">
+            
+          <li class="slider__item js-slider__item slider__item_disabled" aria-hidden="true">
             <picture class="slider__photo">
               <source type="image/webp" srcset="img/photo_3@1x.webp 1x, img/photo_3@2x.webp 2x">
               <img class="slider__img" src="img/photo_3@1x.jpg" srcset="img/photo_3@2x.jpg 2x" alt="Building wall with logo Digital factory" >
@@ -75,13 +75,13 @@
           </li>
         </ul>
 
-        <button class="slider__button slider__button_prev" type="button" aria-label="Previous slide">
+        <button class="slider__button slider__button_prev js-slider__button_prev" type="button" aria-controls="slider" aria-label="Previous slide">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
             <path d="M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z" transform="translate(20 36) rotate(180)" opacity="0.4"/>
           </svg>
         </button>
 
-        <button class="slider__button slider__button_next" type="button" aria-label="Next slide">
+        <button class="slider__button slider__button_next js-slider__button_next" type="button" aria-controls="slider" aria-label="Next slide">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36">
             <path d="M20,18.084,2.794,36,0,33.07,14.473,18,0,2.93,2.794,0,20,17.917,19.92,18Z" opacity="0.4"/>
           </svg>
@@ -140,5 +140,7 @@
       <div class="main__decoration main__decoration_test">тестовое задание</div>
     </div>
   </section>
+
+  <script src="js/slider.js"></script>
 </body>
 </html>

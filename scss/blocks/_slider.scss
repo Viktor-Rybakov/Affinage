@@ -55,7 +55,7 @@
   @include min-width(480px) {
     left: auto;
     right: 0;
-    transform: translateX(0%);
+    transform: translateX(0);
   }
 
   @include tablet {
@@ -65,6 +65,30 @@
 
 .slider__item_disabled {
   display: none;
+}
+
+.slider__item_back.slider__item_animate_in {
+  animation: 1s back reverse;
+}
+
+.slider__item_back.slider__item_animate_out {
+  animation: 1s back;
+}
+
+.slider__item_front.slider__item_animate_in {
+  animation: 1s front-in_phone;
+
+  @include min-width(480px) {
+    animation: 1s front-in;
+  }
+}
+
+.slider__item_front.slider__item_animate_out {
+  animation: 1s front-out_phone;
+
+  @include min-width(480px) {
+    animation: 1s front-out;
+  }
 }
 
 .slider__photo {
@@ -105,21 +129,26 @@
 
 .slider__item_back .slider__photo {
   height: 184px;
+  width: 280px;
 
   @include min-width(480px) {
     height: 250px;
+    width: 380px;
   }
 
   @include tablet {
     height: 300px;
+    width: 457px;
   }
 
   @include tablet-ipad {
     height: 400px;
+    width: 609px;
   }
 
   @include desktop {
     height: 525px;
+    width: 800px;
   }
 
   &::after {
@@ -129,17 +158,21 @@
 
 .slider__item_front .slider__photo {
   height: 318px;
+  width: 558px;
   
   @include tablet {
     height: 350px;
+    width: 614px;
   }
 
   @include tablet-ipad {
     height: 440px;
+    width: 772px;
   }
 
   @include desktop {
     height: 490px;
+    width: 860px;
   }
 
   &::after {
@@ -154,8 +187,9 @@
 .slider__img {
   display: block;
   height: 100%;
-  width: auto;
-  max-width: initial;
+  width: 100%;
+  object-fit: cover;
+  object-position: top right;
 
   @include tablet {
     max-width: 100%;
