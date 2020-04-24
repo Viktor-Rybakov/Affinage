@@ -1,4 +1,4 @@
-@keyframes front-out {
+@keyframes front-right {
   30% {
     transform: translateX(-50px);
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes front-out_phone {
+@keyframes front-right_phone {
   30% {
     transform: translateX(-55%);
   }
@@ -16,7 +16,7 @@
   }
 }
 
-@keyframes front-in {
+@keyframes front-left {
   0% {
     transform: translateX(-3000px);
   }
@@ -28,7 +28,7 @@
   }
 }
 
-@keyframes front-in_phone {
+@keyframes front-left_phone {
   0% {
     transform: translateX(-1000px);
   }
