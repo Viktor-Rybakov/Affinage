@@ -19,11 +19,16 @@
   display: block;
   margin-left: 20px;
   margin-top: 11px;
-
+  
   @include tablet {
     align-self: flex-start;
     margin-left: 34px;
     margin-top: 0;
+    
+    &:focus svg path,
+    &:hover svg path {
+      fill: $color-2;
+    }
   }
 }
 
@@ -38,6 +43,11 @@
   @include tablet {
     align-self: flex-end;
     margin-right: 80px;
+
+    &:focus svg g,
+    &:hover svg g {
+      fill: $color-2;
+    }
   }
 
 }
