@@ -1,5 +1,6 @@
 let slider = document.querySelector('.js-slider');
 let photoList = document.querySelectorAll('.js-slider__item');
+let photoNumber = photoList.length;
 let title = document.querySelector('.js-main__title');
 let photoFront;
 let photoFrontId;
@@ -10,7 +11,7 @@ let photoNextId;
 let photoPrev;
 let photoPrevId;
 
-for (let i = 0; i < photoList.length; ++i) {
+for (let i = 0; i < photoNumber; ++i) {
     
   if ( photoList[i].classList.contains('slider__item_front') || photoList[i].classList.contains('slider__item_back')) {
     photoList[i].setAttribute('aria-hidden', false);
@@ -21,56 +22,45 @@ for (let i = 0; i < photoList.length; ++i) {
 
 slider.onclick = function(event) {
 
-  if (photoList.length == 2) {
-    photoFront = document.querySelector('.slider__item_front');
-    photoBack = document.querySelector('.slider__item_back');
-
-    if ( event.target.closest('.js-slider__button_next') ) {
-      changeSlides(fadeOutTwoSlidesNext, changeTwoSlidesNext, removeAnimationTwoSlidesNext);
-    }
-
-    if ( event.target.closest('.js-slider__button_prev') ) {
-      changeSlides(fadeOutTwoSlidesPrev, changeTwoSlidesPrev, removeAnimationTwoSlidesPrev);
-    }
-  }
-
-  if (photoList.length > 2) {
-    for (let i = 0; i < photoList.length; ++i) {
+  switch (photoNumber) {
+    case 2:
+      photoFront = document.querySelector('.slider__item_front');
+      photoBack = document.querySelector('.slider__item_back');
     
-      if ( photoList[i].classList.contains('slider__item_front') ) {
-        photoFront = photoList[i];
-        photoFrontId = i;
+      if ( event.target.closest('.js-slider__button_next') ) {
+        changeSlides(fadeOutTwoSlidesNext, changeTwoSlidesNext, removeAnimationTwoSlidesNext);
       }
     
-      if ( photoList[i].classList.contains('slider__item_back') ) {
-        photoBack = photoList[i];
-        photoBackId = i;
-      }  
-    }
-
-    if ( event.target.closest('.js-slider__button_next') ) {
-      if ( photoFrontId != 0 ) {
-        photoNextId = photoFrontId - 1;
-      } else {
-        photoNextId = photoList.length - 1;
+      if ( event.target.closest('.js-slider__button_prev') ) {
+        changeSlides(fadeOutTwoSlidesPrev, changeTwoSlidesPrev, removeAnimationTwoSlidesPrev);
       }
+      break;
 
-      photoNext = photoList[photoNextId];
-
-      changeSlides(fadeOutThreeSlidesNext, changeThreeSlidesNext, removeAnimationThreeSlidesNext);
-    }
-  
-    if ( event.target.closest('.js-slider__button_prev')) {
-      if ( photoBackId != photoList.length - 1) {
-        photoPrevId = photoBackId + 1;
-      } else {
-        photoPrevId = 0;
+    default:
+      for (let i = 0; i < photoNumber; ++i) {
+      
+        if ( photoList[i].classList.contains('slider__item_front') ) {
+          photoFront = photoList[i];
+          photoFrontId = i;
+        }
+      
+        if ( photoList[i].classList.contains('slider__item_back') ) {
+          photoBack = photoList[i];
+          photoBackId = i;
+        }
       }
-
-      photoPrev = photoList[photoPrevId];
-
-      changeSlides(fadeOutThreeSlidesPrev, changeThreeSlidesPrev, removeAnimationThreeSlidesPrev);
-    }
+    
+      if ( event.target.closest('.js-slider__button_next') ) {
+        photoNextId = (photoFrontId != 0) ? photoFrontId - 1 : photoNumber - 1;
+        photoNext = photoList[photoNextId];
+        changeSlides(fadeOutThreeSlidesNext, changeThreeSlidesNext, removeAnimationThreeSlidesNext);
+      }
+    
+      if ( event.target.closest('.js-slider__button_prev')) {
+        photoPrevId = (photoBackId != (photoNumber - 1)) ? photoBackId + 1 : 0;
+        photoPrev = photoList[photoPrevId];
+        changeSlides(fadeOutThreeSlidesPrev, changeThreeSlidesPrev, removeAnimationThreeSlidesPrev);
+      }
   }
 }
 
