@@ -1,3 +1,5 @@
+'use strict'
+
 let slider = document.querySelector('.js-slider');
 let photoList = document.querySelectorAll('.js-slider__item');
 let photoNumber = photoList.length;
