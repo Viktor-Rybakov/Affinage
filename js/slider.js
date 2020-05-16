@@ -22,7 +22,9 @@ for (let i = 0; i < photoNumber; ++i) {
   }
 }
 
-slider.onclick = function(event) {
+slider.onclick = change;
+
+function change (event) {
 
   switch (photoNumber) {
     case 2:
@@ -67,6 +69,7 @@ slider.onclick = function(event) {
 }
 
 function changeSlides (fadeOut, change, remove) {
+  slider.onclick = null;
   fadeOut();
   setTimeout (change, 950);
   setTimeout (remove, 2100);
@@ -94,6 +97,8 @@ function removeAnimationTwoSlidesNext() {
   photoBack.classList.remove('slider__item_animate_left-in');
   photoFront.classList.remove('slider__item_animate_fadein');
   title.classList.remove('main__title_shadow');
+
+  slider.onclick = change;
 }
 
 function fadeOutTwoSlidesPrev() {
@@ -118,6 +123,8 @@ function removeAnimationTwoSlidesPrev() {
   photoBack.classList.remove('slider__item_animate_right-in');
   photoFront.classList.remove('slider__item_animate_fadein');
   title.classList.remove('main__title_shadow');
+
+  slider.onclick = change;
 }
 
 function fadeOutThreeSlidesNext() {
@@ -148,6 +155,8 @@ function removeAnimationThreeSlidesNext() {
   photoNext.classList.remove('slider__item_animate_fadein');
   photoBack.classList.remove('slider__item_animate_left-in');
   title.classList.remove('main__title_shadow');
+
+  slider.onclick = change;
 }
 
 function fadeOutThreeSlidesPrev() {
@@ -178,4 +187,6 @@ function removeAnimationThreeSlidesPrev() {
   photoPrev.classList.remove('slider__item_animate_right-in');
   photoFront.classList.remove('slider__item_animate_fadein');
   title.classList.remove('main__title_shadow');
+
+  slider.onclick = change;
 }
